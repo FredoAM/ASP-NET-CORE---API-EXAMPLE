@@ -1,0 +1,21 @@
+﻿@model List<Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h1>Products</h1>
+    @foreach (var product in Model) {
+        <div>
+            <h2>@product.Title</h2>
+            <p>Price: @product.Price</p>
+            <p>Description: @product.Description</p>
+            <p>Category: @product.Category</p>
+            <img src="@product.Image" alt="@product.Title" />
+            <p>Rating: @product.Rating.Rate (from @product.Rating.Count reviews)</p>
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Products";
+
+    var products = Model;
+}
+
+<ul>
+    @foreach (var product in products) {
+        <li>
+            <strong>Id:</strong> @product.Id
+            <br />
+            <strong>Name:</strong> @product.Name
+            <br />
+            <strong>Description:</strong> @product.Description
+            <br />
+            <strong>Price:</strong> @product.Price
+            <br />
+            <strong>Image:</strong> <img src="@product.ImageUrl" />
+            <br />
+            <strong>Rating:</strong> @product.Rating.Rate
+            <br />
+            <strong>Rating count:</strong> @product.Rating.Count
+        </li>
+    }
+</ul>
